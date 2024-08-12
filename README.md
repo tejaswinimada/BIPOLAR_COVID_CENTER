@@ -20,3 +20,4 @@ Use this tech-stack:-
 API Framework- Flask/FastAPI/Django/Quart
 Front-end - HTML,CSS
 Database-MYSQL
+
