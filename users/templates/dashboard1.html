@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h2 {
+            margin-top: 20px;
+            color: #333;
+        }
+        .dashboard-button {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .dashboard-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h2>WELCOME TO USERS PORTAL</h2>
+    <a href="{% url 'search_centers' %}" class="dashboard-button">Search Centers</a>
+    <!-- Assuming 'centers' is a context variable passed to this template -->
+    <a href="{% url 'logout' %}" class="dashboard-button">Logout</a>
+</body>
+</html>

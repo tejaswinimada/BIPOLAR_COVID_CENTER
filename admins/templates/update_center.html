@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Vaccination Center</title>
+    <style>
+     
+        body {
+            background-image: url('/static/images/image2.jpeg');
+            background-size: cover;
+            background-position: center;
+            font-family: Georgia, serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* Ensure body takes full height */
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+        }
+        
+        /* Container for the form */
+        .container {
+            width: 80%;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        /* Header styling */
+        h2 {
+            color: #4a4a4a;
+            margin-bottom: 20px; /* Space between header and form */
+        }
+        
+        /* Form styling */
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        /* Button styling */
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        
+        button:active {
+            background-color: #003d7a;
+        }
+        
+        /* Link styling */
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h2>Update Vaccination Center</h2>
+    <form method="POST" action="{% url 'update_center' center.id %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Update Center</button>
+    </form>
+    <a href="{% url 'center_list' %}">Back to Center List</a>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <style>
+       
+  
+        body {
+            background-image: url('/static/images/image2.jpeg');
+            background-size: cover;
+            background-position: center;
+            font-family: Georgia, serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* Ensure body takes full height */
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+        }
+.container {
+  
+  padding: 50px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  text-align:center;
+}
+
+a {
+    text-decoration: none;
+    color: white /* Adjust link color as needed */
+    margin: 10px;
+    padding: 10px 20px;
+    border: 2px solid #007BFF; /* Add border for a button-like appearance */
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+a:hover {
+    background-color: #007BFF; /* Adjust hover background color as needed */
+    color: #fff; /* Adjust hover text color as needed */
+}
+
+h1 {
+    color: #333; /* Adjust heading color as needed */
+    margin-top: 20px;
+}
+p a {
+    color: white;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+ .logo {
+    position: fixed;
+    top: -1px;
+    right: -2px;
+    z-index: 999; /* Ensure the logo appears above other content */
+}
+
+.logo img {
+    width: 300px; /* Adjust the width of the logo as needed */
+    height: auto; /* Maintain aspect ratio */
+} 
+
+        
+        
+    </style>
+</head>
+<body><h1> WELCOME TO COVID VACCINATION BOOKING</h1>
+    <div class="container">
+    
+    <a href="/register/">
+    Register
+    </a>
+    <a href="/login/">
+    Login
+    </a>
+   
+    </div>
+   
+    
+    <div class="logo">
+        <img src="/static/images/image2.jpg" alt="Logo">
+    </div>
+    
+    
+</body>
+</html>

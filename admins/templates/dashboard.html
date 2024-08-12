@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+    /* General body styling */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* Header styling */
+    h2 {
+        color: #4a4a4a;
+        text-align: center;
+        margin: 20px 0;
+    }
+    
+    /* Dashboard container styling */
+    .dashboard-container {
+        width: 80%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Button styling */
+    .dashboard-button {
+        display: inline-block;
+        margin: 10px;
+        padding: 15px 25px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    
+    .dashboard-button:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+    }
+    
+    .dashboard-button:active {
+        background-color: #003d7a;
+    }
+    
+    /* Link styling */
+    a {
+        text-decoration: none;
+    }
+    
+    /* Responsive design */
+    @media (max-width: 768px) {
+        .dashboard-button {
+            display: block;
+            width: calc(100% - 40px);
+            margin: 10px auto;
+            text-align: center;
+        }
+    }
+    
+
+
+        
+
+    </style>
+</head>
+<body>
+    <h2>WELCOME TO ADMIN DASHBOARD</h2>
+    <a href="{% url 'add_center' %}" class="dashboard-button">Add Centers</a>
+    <!-- Assuming center_id is available from context in your real template -->
+    
+    <a href="{% url 'dosage_details' %}" class="dashboard-button">Dosage Details</a>
+    <a href="{% url 'admin_booked_slots' %}" class="dashboard-button">View Booked Slots</a>
+    <a href="{% url 'logout1' %}" class="dashboard-button">Logout</a>
+</body>
+</html>
