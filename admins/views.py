@@ -22,7 +22,7 @@ def Register(request):
                 password_hashed = make_password(password)
                 user = Signup(username=username, password=password_hashed, email=email)
                 user.save()
-                return redirect('Login')
+                return redirect('Login1')
         else:
             form.add_error(None, 'Form is invalid')
     else:
